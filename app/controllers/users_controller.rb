@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :build_book_object
+  
   def index
   end
 
