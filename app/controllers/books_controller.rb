@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :build_book_object
+  layout 'logged_in_template'
   
   def show
   end
@@ -17,6 +18,7 @@ class BooksController < ApplicationController
   end
 
   def index
+    @books = Book.all
   end
   
   private
