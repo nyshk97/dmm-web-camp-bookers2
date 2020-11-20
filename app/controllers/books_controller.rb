@@ -3,6 +3,7 @@ class BooksController < ApplicationController
   layout 'logged_in_template'
   
   def show
+    @book = Book.find(params[:id])
   end
   
   def create
@@ -15,10 +16,17 @@ class BooksController < ApplicationController
   end
 
   def edit
+    @book = Book.find(params[:id])
   end
 
   def index
     @books = Book.all
+  end
+  
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to books_url
   end
   
   private
