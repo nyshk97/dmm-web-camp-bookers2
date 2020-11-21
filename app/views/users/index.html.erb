@@ -1,2 +1,19 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h2>Users</h2>
+<table class='table table-hover table-inverse'>
+  <thead>
+     <tr>
+     	<th></th>
+        <th>Image</th>
+        <th>Name</th>
+        <th></th>
+     </tr>
+     <% @users.each do |user| %>
+     <tr>
+     	<td><%= image_tag 'no_image.jpg', width: 40 %></td>
+        <td><%= user.name %></td>
+        <td><%= link_to 'show', user_path(user) %></td>
+     </tr>
+     <% end %>
+  </thead>
+  <tbody></tbody>
+</table>

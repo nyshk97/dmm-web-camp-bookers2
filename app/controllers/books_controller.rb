@@ -17,6 +17,16 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
+    render :layout => 'application'
+  end
+  
+  def update
+    @book = Book.find(params[:id])
+    if @book.update(book_params)
+      redirect_to books_url
+    else
+      render 'books/edit'
+    end
   end
 
   def index

@@ -3,10 +3,12 @@ class UsersController < ApplicationController
   layout 'logged_in_template'
   
   def index
+    @users = User.all
   end
 
   def show
     @books = Book.where(user_id: current_user.id)
+    @user = User.find(params[:id])
   end
 
   def edit
