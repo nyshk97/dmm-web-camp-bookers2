@@ -6,7 +6,9 @@
 <p><%= @book.title %></p>
 <h3>Opinion</h3>
 <p><%= @book.opinion %></p>
+<% if book_posted_by_current_user?(@book) %>
 <div class="mt-4">
   <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-success' %>
   <%= link_to 'Destroy', book_path(@book), method: :delete, class: 'btn btn-danger' %>
 </div>
+<% end %>
