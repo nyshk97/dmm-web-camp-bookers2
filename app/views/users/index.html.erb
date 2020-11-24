@@ -2,16 +2,15 @@
 <table class='table table-hover table-inverse'>
   <thead>
      <tr>
-     	<th></th>
-        <th>Image</th>
-        <th>Name</th>
-        <th></th>
+      <th>Image</th>
+      <th>Name</th>
+      <th></th>
      </tr>
      <% @users.each do |user| %>
      <tr>
-     	<td><%= image_tag 'no_image.jpg', width: 40 %></td>
-        <td><%= user.name %></td>
-        <td><%= link_to 'show', user_path(user) %></td>
+      <td><%= show_thumbnail(user, 40, 40) %></td>
+      <td><%= user.name %></td>
+      <td><%= link_to 'show', user_path(user) %></td>
      </tr>
      <% end %>
   </thead>

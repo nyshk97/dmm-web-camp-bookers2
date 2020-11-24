@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @books = Book.where(user_id: current_user.id)
+    @books = Book.where(user_id: current_user.id).includes(:user)
     @user = User.find(params[:id])
   end
 
