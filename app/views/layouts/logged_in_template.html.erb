@@ -18,10 +18,10 @@
             <div class='col-md-3'>
                <h2>User info</h2>
                <div class="mb-3">
-                  <% if(current_user.thumbnail_id) %>
-                     <%= image_tag attachment_url(current_user, :thumbnail, :fill, 100, 100) %>
+                  <% if @user %>
+                     <%= show_thumbnail(@user) %>
                   <% else %>
-                     <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg" />
+                     <%= show_thumbnail(current_user) %>
                   <% end %>
                </div>
                <table class='table'>
