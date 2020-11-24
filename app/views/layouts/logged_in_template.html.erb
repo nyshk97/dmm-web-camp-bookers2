@@ -17,10 +17,14 @@
          <div class='row'>
             <div class='col-md-3'>
                <h2>User info</h2>
-               <table class='table'>
-                  <tr>
+               <div class="mb-3">
+                  <% if(current_user.thumbnail_id) %>
+                     <%= image_tag attachment_url(current_user, :thumbnail, :fill, 100, 100) %>
+                  <% else %>
                      <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg" />
-                  </tr>
+                  <% end %>
+               </div>
+               <table class='table'>
                   <tr>
                      <th>name</th>
                      <th><%= @user ? @user.name : current_user.name %></th>
