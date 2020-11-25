@@ -12,7 +12,7 @@ Rails 5.2.4.4
 ```
 $ git clone git@github.com:nyshk97/dmm-web-camp-bookers2.git
 or
-$ gir clone https://github.com/nyshk97/dmm-web-camp-bookers2.git
+$ git clone https://github.com/nyshk97/dmm-web-camp-bookers2.git
 
 $ cd dmm-web-camp-bookers2
 $ rails s
