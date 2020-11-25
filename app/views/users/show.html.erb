@@ -10,7 +10,7 @@
     <tr>
       <td><%= show_thumbnail(book.user, 40, 40) %></td>
       <td><%= link_to book.title, book_path(book) %></td>
-      <td colspan="3"><%= book.opinion %></td>
+      <td colspan="3"><%= book.body %></td>
      </tr>
      <% end %>
   </thead>
