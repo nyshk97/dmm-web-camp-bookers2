@@ -10,10 +10,7 @@ Rails 5.2.4.4
 ```
 ## Get Started
 ```
-$ git clone git@github.com:nyshk97/dmm-web-camp-bookers2.git
-or
-$ git clone https://github.com/nyshk97/dmm-web-camp-bookers2.git
-
-$ cd dmm-web-camp-bookers2
+$ mv config/database.yml.default config/database.yml
+$ rails db:migrate
 $ rails s
 ```
